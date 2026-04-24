@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("=== Menu Persegi Panjang ===");
+        System.out.println("1. Hitung Luas");
+        System.out.println("2. Hitung Keliling");
+        System.out.print("Pilih (1/2): ");
+        
+        // Memastikan input menu adalah angka
+        if (!in.hasNextInt()) {
+            System.out.println("Error: Masukkan angka 1 atau 2!");
+            return;
+        }
+        
+        int pil = in.nextInt();
+        
+        // Selection: Cek apakah pilihan valid
+        if (pil == 1 || pil == 2) {
+            System.out.print("Masukkan Panjang: ");
+            double p = in.nextDouble();
+            System.out.print("Masukkan Lebar: ");
+            double l = in.nextDouble();
+            
+            if (pil == 1) {
+                double luas = p * l;
+                System.out.println("Hasil Luas: " + luas);
+            } else {
+                double keliling = 2 * (p + l);
+                System.out.println("Hasil Keliling: " + keliling);
+            }
+        } else {
+            System.out.println("Error: Pilihan tidak tersedia!");
+        }
+        
+        in.close(); // Menutup scanner
+    }
+}
