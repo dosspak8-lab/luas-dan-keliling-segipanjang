@@ -1,0 +1,34 @@
+program HitungPersegiPanjang;
+
+var
+  pilihan: integer;
+  p, l, hasil: real;
+
+begin
+  writeln('--- MENU PERSEGI PANJANG ---');
+  writeln('1. Hitung Luas');
+  writeln('2. Hitung Keliling');
+  write('Pilih (1/2): '); 
+  readln(pilihan);
+
+  write('Masukkan Panjang: '); 
+  readln(p);
+  write('Masukkan Lebar: '); 
+  readln(l);
+
+  { Struktur Pemilihan / Selection }
+  if (pilihan = 1) then
+  begin
+    hasil := p * l;
+    writeln('Hasil Luas: ', hasil:0:2);
+  end
+  else if (pilihan = 2) then
+  begin
+    hasil := 2 * (p + l);
+    writeln('Hasil Keliling: ', hasil:0:2);
+  end
+  else
+  begin
+    writeln('Pilihan tidak valid!');
+  end;
+end.
