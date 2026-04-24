@@ -1,0 +1,17 @@
+* Program Persegi Panjang Visual FoxPro
+CLEAR
+INPUT "1. Luas, 2. Keliling. Pilih (1/2): " TO nPil
+INPUT "Masukkan Panjang: " TO nP
+INPUT "Masukkan Lebar : " TO nL
+
+* Struktur Pemilihan (Selection)
+DO CASE
+    CASE nPil = 1
+        nHasil = nP * nL
+        ? "Hasil Luas: ", nHasil
+    CASE nPil = 2
+        nHasil = 2 * (nP + nL)
+        ? "Hasil Keliling: ", nHasil
+    OTHERWISE
+        ? "Pilihan tidak valid!"
+ENDCASE
