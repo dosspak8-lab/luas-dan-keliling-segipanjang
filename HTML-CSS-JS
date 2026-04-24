@@ -1,0 +1,17 @@
+<!-- Save as index.html -->
+<style>body { font-family: sans-serif; }</style>
+<input id="p" placeholder="Panjang">
+<input id="l" placeholder="Lebar">
+<select id="pil"><option value="1">Luas</option><option value="2">Keliling</option></select>
+<button onclick="hitung()">Hitung</button>
+<p id="hasil"></p>
+
+<script>
+function hitung() {
+    let p = parseFloat(document.getElementById('p').value);
+    let l = parseFloat(document.getElementById('l').value);
+    let pil = document.getElementById('pil').value;
+    let res = (pil == "1") ? p * l : 2 * (p + l);
+    document.getElementById('hasil').innerText = "Hasil: " + res;
+}
+</script>
