@@ -1,0 +1,10 @@
+import 'dart:io';
+void main() {
+  print("1.Luas 2.Keliling: ");
+  int? pil = int.parse(stdin.readLineSync()!);
+  if(pil == 1 || pil == 2) {
+    print("Panjang: "); double p = double.parse(stdin.readLineSync()!);
+    print("Lebar: "); double l = double.parse(stdin.readLineSync()!);
+    print(pil == 1 ? "Luas: ${p*l}" : "Keliling: ${2*(p+l)}");
+  }
+}
